@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users List</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 8px 12px;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+      th {
+        background-color: #f4f4f4;
+      }
+      form {
+        margin-bottom: 20px;
+      }
+      label {
+        margin-right: 10px;
+      }
+      input[type="text"],
+      input[type="email"] {
+        padding: 5px;
+        margin-right: 10px;
+      }
+      button {
+        padding: 5px 10px;
+      }
+      .error-message {
+        color: red;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Users</h1>
+
+    <div id="error-message" class="error-message"></div>
+
+    <form id="user-form">
+      <input type="hidden" id="user-id" />
+
+      <label for="name">Name:</label>
+      <!-- <input type="text" id="name" name="name" required /> -->
+      <input type="text" id="name" name="name"  />
+
+      <label for="email">Email:</label>
+      <!-- <input type="email" id="email" name="email" required /> -->
+      <input type="email" id="email" name="email"  />
+
+      <button type="submit" id="submit-btn">Add User</button>
+    </form>
+
+    <table id="users-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="users-table-body"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
+</html>
