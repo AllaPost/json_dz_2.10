@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded", function () {
   // Основная форма
   const form = document.getElementById("user-form");
 
-  // Делаем запрос, ожидаем завершения и используем данные
+  // Делаем запрос, ожидаем завершения и используем данные:
   fetchUsers().then((dataUser) => {
     if (dataUser.length) {
       users = dataUser.map((user) => {
